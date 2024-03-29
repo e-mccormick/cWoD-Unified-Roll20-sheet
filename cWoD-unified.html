@@ -3717,31 +3717,15 @@
                     In Use?
                 </div>
             </div>
-
-            <!-- <div class="sheet-row">
-                <div class="sheet-item sheet-90">
-                    <input type="text" name="attr_armor-name"/>
-                </div>
-                <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor-Rating"/>
-                </div>
-                <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor-Dexterity_Penalty"/>
-                </div>
-                <div class="sheet-item sheet-40">
-                    Base
-                </div>
-            </div> -->
-
             <div class="sheet-row">
                 <div class="sheet-item sheet-90">
-                    <input type="text" name="attr_armor1-name"/>
+                    <input type="text" name="attr_armor1-name" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor1-Rating"/>
+                    <input type="number" name="attr_armor1_rating" value="0" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor1-Dexterity_Penalty"/>
+                    <input type="number" name="attr_armor1_dexterity_penalty" value="0" />
                 </div>
 								<div class="sheet-item sheet-40">
                     <div class="sheet-Query">
@@ -3757,10 +3741,10 @@
                     <input type="text" name="attr_armor2-name"/>
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor2-Rating"/>
+                    <input type="number" name="attr_armor2_rating" value="0" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor2-Dexterity_Penalty"/>
+                    <input type="number" name="attr_armor2_dexterity_penalty" value="0" />
                 </div>
 								<div class="sheet-item sheet-40">
                     <div class="sheet-Query">
@@ -3776,10 +3760,10 @@
                     <input type="text" name="attr_armor3-name"/>
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor3-Rating"/>
+                    <input type="number" name="attr_armor3_rating" value="0" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor3-Dexterity_Penalty"/>
+                    <input type="number" name="attr_armor3_dexterity_penalty" value="0" />
                 </div>
 								<div class="sheet-item sheet-40">
                     <div class="sheet-Query">
@@ -3792,13 +3776,13 @@
             </div>
             <div class="sheet-row">
                 <div class="sheet-item sheet-90">
-                    <input type="text" name="attr_armor4-name"/>
+                    <input type="text" name="attr_armor4-name" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor4-Rating"/>
+                    <input type="number" name="attr_armor4_rating" value="0" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" name="attr_armor4-Dexterity_Penalty"/>
+                    <input type="number" name="attr_armor4_dexterity_penalty" value="0" />
                 </div>
 								<div class="sheet-item sheet-40">
                     <div class="sheet-Query">
@@ -3809,41 +3793,19 @@
                     </div>
                 </div>
             </div>
-
-
-		  <!-- <span><input class="tally" type="number" value="0" min="0" name=attr_characteristicsCost title="@{characteristicsCost}" readonly="true" tabindex="-1"/></span> -->
-
       <div class="sheet-row">
           <div class="sheet-item sheet-90">
                     <span>Totals:</span>
                 </div>
                 <div class="sheet-item sheet-50">
-										<input type="number" value="0" min="0" name="attr_armor-Rating" readonly="true" />
+										<input type="number" value="0" name="attr_armor_rating" readonly="true" />
                 </div>
                 <div class="sheet-item sheet-50">
-                    <input type="number" value="0" min="0" name="attr_armor-Dexterity_Penalty" readonly="true" />
+                    <input type="number" value="0" name="attr_armor_dexterity_penalty" readonly="true" />
                 </div>
 								<div class="sheet-item sheet-40">
                 </div>
       </div>
-
-     <!-- <div class="sheet-row">
-          <div class="sheet-item sheet-90">
-                    <span>Totals:</span>
-                </div>
-                <div class="sheet-item sheet-50">
-                    <span class="status" name="attr_armor-Rating"></span>
-                    <input type="hidden" name="attr_armor-Rating" value="0" />
-                </div>
-                <div class="sheet-item sheet-50">
-                    <span class="status" name="attr_armor-Dexterity_Penalty"></span>
-                    <input type="hidden" name="attr_armor-Dexterity_Penalty" value="0" />
-                </div>
-								<div class="sheet-item sheet-40">
-                </div>
-      </div> -->
-      
-
             <br>
             <div class="sheet-row">
                 <div class="sheet-item sheet-90">
@@ -3878,7 +3840,7 @@
                 <div class="sheet-item sheet-40">
                     <div class="sheet-Query">
                         <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{pool= Bashing Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Bashing} )d10!s}>@{Soak_diff-Bashing}f1 ]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Bashing Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Bashing} + @{armor-Rating})d10!s}>@{Soak_diff-Bashing}f1 ]] }}" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Bashing" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor_rating}]] }} {{pool= Bashing Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Bashing}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Bashing} + @{armor_rating})d10!s}>@{Soak_diff-Bashing}f1 ]] }}" />
                         <span class="sheet-Query sheet-yes">Yes</span>
                         <span class="sheet-Query sheet-no">No</span>
                     </div>
@@ -3900,7 +3862,7 @@
                 <div class="sheet-item sheet-40">
                     <div class="sheet-Query">
                         <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{pool= Lethal Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Lethal} )d10!s}>@{Soak_diff-Lethal}f1 ]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Lethal Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Lethal} + @{armor-Rating})d10!s}>@{Soak_diff-Lethal}f1 ]] }}" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Lethal" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor_rating}]] }} {{pool= Lethal Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Lethal}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Lethal} + @{armor_rating})d10!s}>@{Soak_diff-Lethal}f1 ]] }}" />
                         <span class="sheet-Query sheet-yes">Yes</span>
                         <span class="sheet-Query sheet-no">No</span>
                     </div>
@@ -3922,7 +3884,7 @@
                 <div class="sheet-item sheet-40">
                     <div class="sheet-Query">
                         <input type="radio" class="sheet-Query sheet-no" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Aggravated} )d10!s}>@{Soak_diff-Aggravated}f1 ]] }}" checked="checked" />
-                        <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor-Rating}]] }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Aggravated} + @{armor-Rating})d10!s}>@{Soak_diff-Aggravated}f1 ]] }}" />
+                        <input type="radio" class="sheet-Query sheet-yes" name="attr_Armor_toggle-Aggravated" value="&{template:wod} {{name= @{character_name} }} {{skill= Armor [[@{armor_rating}]] }} {{pool= Aggravated Soak}} {{attr= Stamina [[@{stamina}]] }} {{mod= Modifier [[@{Soak_mod-Aggravated}]] }} {{result= [[ {(@{stamina} + @{Soak_mod-Aggravated} + @{armor_rating})d10!s}>@{Soak_diff-Aggravated}f1 ]] }}" />
                         <span class="sheet-Query sheet-yes">Yes</span>
                         <span class="sheet-Query sheet-no">No</span>
                     </div>
@@ -3930,10 +3892,10 @@
             </div>
             <div class="sheet-row">
                 <div class="sheet-item sheet-90">
-                    <button type='roll' class="sheet-btn" name="attr_soak_armor" value="&{template:wod} {{name= @{character_name} }} {{pool= Armor Only Soak}} {{attr= Armor [[@{armor-Rating}]] }} {{result= [[ {(@{armor-Rating})d10!s}>@{Soak_diff-armor}f1 ]]}} ">Armor Only</button>
+                    <button type='roll' class="sheet-btn" name="attr_soak_armor" value="&{template:wod} {{name= @{character_name} }} {{pool= Armor Only Soak}} {{attr= Armor [[@{armor_rating}]] }} {{result= [[ {(@{armor_rating})d10!s}>@{Soak_diff-armor}f1 ]]}} ">Armor Only</button>
                 </div>
                 <div class="sheet-item sheet-30">
-                    <span class="sheet-display-sm" name="attr_armor-Rating"></span>
+                    <span class="sheet-display-sm" name="attr_armor_rating"></span>
                 </div>
                 <div class="sheet-item sheet-40">
                     <input type="number" name="attr_Soak_mod-armor" value="0" />
@@ -4268,7 +4230,20 @@
 </div>
 
 <script type="text/worker">
-
+/*
+on('add:character', function (obj) {
+    var arAttr = findObjs({
+        _characterid: obj.id,
+        name: 'armor_rating'
+    })[0];    
+    if (!arAttr) { 
+        createObj("attribute", {
+				name: "armor_rating",
+				current: 0,
+				characterid: obj.id
+    }
+});
+*/
     //Renown   
 on("change:renown_type sheet:opened", function() {
     getAttrs(['renown_type'], function(values) {
@@ -4944,38 +4919,37 @@ on("change:healthbox_7 change:healthbox_8 change:healthbox_9 change:healthbox_10
     });
 });
 
-/* 
-on("change:armor1-Rating change:armor2-Rating change:armor3-Rating change:armor4-Rating change:armor_1_use change:armor_2_use change:armor_3_use change:armor_4_use change:armor1-Dexterity_Penalty change:armor2-Dexterity_Penalty change:armor3-Dexterity_Penalty change:armor4-Dexterity_Penalty sheet:opened", function() {
-    getAttrs(['armor1-Rating', 'armor2-Rating', 'armor3-Rating', 'armor4-Rating', 'armor_1_use', 'armor_2_use', 'armor_3_use', 'armor_4_use', 'armor1-Dexterity_Penalty', 'armor2-Dexterity_Penalty', 'armor3-Dexterity_Penalty', 'armor4-Dexterity_Penalty'], function(values) {
-        setAttrs({ 
-						armor-Rating: ((values.armor1-Rating * values.armor_1_use) + (values.armor2-Rating * values.armor_2_use) + (values.armor3-Rating * values.armor_3_use) + (values.armor4-Rating * values.armor_4_use)),
-						c ((values.armor1-Dexterity_Penalty * Number(values.armor_1_use) + (values.armor2-Dexterity_Penalty * values.armor_2_use) + (values.armor3-Dexterity_Penalty * values.armor_3_use) + (values.armor4-Dexterity_Penalty * values.armor_4_use))
-        });
-    });
-});
-*/
-
-on("change:armor1-Rating change:armor2-Rating change:armor3-Rating change:armor4-Rating change:armor_1_use change:armor_2_use change:armor_3_use change:armor_4_use change:armor1-Dexterity_Penalty change:armor2-Dexterity_Penalty change:armor3-Dexterity_Penalty change:armor4-Dexterity_Penalty sheet:opened", function() {
-	getAttrs(["armor1-Rating", "armor2-Rating", "armor3-Rating", "armor4-Rating", "armor_1_use", "armor_2_use", "armor_3_use", "armor_4_use", "armor1-Dexterity_Penalty", "armor2-Dexterity_Penalty", "armor3-Dexterity_Penalty", "armor4-Dexterity_Penalty"], function(values) {
-		let aR1 = parseInt(values.armor1-Rating)||0;
-		let aR2 = parseInt(values.armor2-Rating)||0;
-		let aR3 = parseInt(values.armor3-Rating)||0;
-		let aR4 = parseInt(values.armor4-Rating)||0;
+on("change:armor1_rating change:armor2_rating change:armor3_rating change:armor4_rating change:armor_1_use change:armor_2_use change:armor_3_use change:armor_4_use change:armor1_dexterity_penalty change:armor2_dexterity_penalty change:armor3_dexterity_penalty change:armor4_dexterity_penalty sheet:opened", function(eventInfo) {
+	getAttrs(["armor1_rating", "armor2_rating", "armor3_rating", "armor4_rating", "armor_1_use", "armor_2_use", "armor_3_use", "armor_4_use", "armor1_dexterity_penalty", "armor2_dexterity_penalty", "armor3_dexterity_penalty", "armor4_dexterity_penalty"], function(values) {
+		let aR1 = parseInt(values.armor1_rating)||0;
+		let aR2 = parseInt(values.armor2_rating)||0;
+		let aR3 = parseInt(values.armor3_rating)||0;
+		let aR4 = parseInt(values.armor4_rating)||0;
 		let aU1 = parseInt(values.armor_1_use)||0;
 		let aU2 = parseInt(values.armor_2_use)||0;
 		let aU3 = parseInt(values.armor_3_use)||0;
 		let aU4 = parseInt(values.armor_4_use)||0;
-		let aDP1 = parseInt(values.armor1-Dexterity_Penalty)||0;
-		let aDP2 = parseInt(values.armor2-Dexterity_Penalty)||0;
-		let aDP3 = parseInt(values.armor3-Dexterity_Penalty)||0;
-		let aDP4 = parseInt(values.armor4-Dexterity_Penalty)||0;
+		let aDP1 = parseInt(values.armor1_dexterity_penalty)||0;
+		let aDP2 = parseInt(values.armor2_dexterity_penalty)||0;
+		let aDP3 = parseInt(values.armor3_dexterity_penalty)||0;
+		let aDP4 = parseInt(values.armor4_dexterity_penalty)||0;
 		let aR = (aR1 * aU1) + (aR2 * aU2) + (aR3 * aU3) + (aR4 * aU4);
 		let aDP = (aDP1 * aU1) + (aDP2 * aU2) + (aDP3 * aU3) + (aDP4 * aU4);
 		setAttrs({                            
-			armor-Rating: aR,
-			armor-Dexterity_Penalty: aDP
+			armor_rating: aR,
+			armor_dexterity_penalty: aDP
 		});
 	});
 });
+
+/*
+
+A different fix for what originally caused the script to fail was removing the - in variables/values:
+
+        const aR1 = parseInt(`${values['armor1-rating']}`) || 0;
+
+This took the literal armor1-rating and bypasses the use of the - in a variable.
+
+*/
 
 </script>
