@@ -1,4 +1,3 @@
-
 .charsheet input.sheet-splat_select[value="1"] ~ div.sheet-splat_select-1,
 .charsheet input.sheet-splat_select[value="2"] ~ div.sheet-splat_select-2,
 .charsheet input.sheet-splat_select[value="3"] ~ div.sheet-splat_select-3,
@@ -23,22 +22,6 @@ div.sheet-core-content {
 .charsheet div[class^="sheet-section"] {
 	display: none;
 }
-.sheet-banner {
-	text-align: center;
-	width:840px;
-	height:100px;
-	background-image: url("http://imgsrv.roll20.net/?src=raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/WerewolfApocalypseRevisedLogo.png");
-	background-size: auto 100px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-/*.charsheet {
-	background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/character_sheet_background.jpg');
-	background-size:100%;
-	background-repeat: repeat-y;
-	width:840px;
-}
-*/
 .charsheet input.sheet-tab1:checked ~ div.sheet-section-1,
 .charsheet input.sheet-tab2:checked ~ div.sheet-section-2,
 .charsheet input.sheet-tab3:checked ~ div.sheet-section-3,
@@ -54,7 +37,7 @@ div.sheet-core-content {
 	display: block;
 }
 .charsheet input.sheet-tab {
-	width: 95px;
+	width: 85px;
 	height: 20px;
 	cursor: pointer;
 	position: relative;
@@ -70,15 +53,13 @@ div.sheet-core-content {
 	color: #000000;
 	font-weight: bold;
 	border-radius: 4px;
-	width: 100px;
-	/*originally 87px*/
-	height: 20px;
-	/*originally 20px*/
+	width: 65px;
+	height: 17px;
 	cursor: pointer;
 	position: relative;
 	vertical-align: middle;
-	margin-left: -101px;
-	/*originally 91px*/
+/*	margin-left: -101px; */
+	margin-left: -93px; 
 	text-shadow: none;
 	border:2px solid black;
 }
@@ -94,9 +75,7 @@ div.sheet-core-content {
 .charsheet input.sheet-tab10:checked + span.sheet-tab10,
 .charsheet input.sheet-tab99:checked + span.sheet-tab99 {
 	background: #000000;
-	/*originally ab8b57*/
 	color: #FFFFFF;
-	/*originally white*/
 	border-radius: 4px;
 	border:2px solid white;
 }
@@ -114,6 +93,10 @@ div.sheet-core-content {
 	height: 24px;
 	margin: 2px 0px 2px;
 }
+.charsheet .sheet-row-sm {
+	height: 12px;
+	margin: 1px 0px 1px;
+}
 .charsheet .sheet-doublerow {
 	height: 48px;
 	margin: 2px 0px 2px;
@@ -127,6 +110,9 @@ div.sheet-core-content {
 	text-align: left;
 	padding: 3px 2px;
 }
+.charsheet .sheet-item-r {
+	text-align: right;
+}
 .charsheet .sheet-trait {
     position: relative; 
 }
@@ -136,14 +122,23 @@ div.sheet-core-content {
 .charsheet .sheet-item.sheet-30 {
 	width: 30px;
 }
+.charsheet .sheet-item.sheet-35 {
+	width: 35px;
+}
 .charsheet .sheet-item.sheet-40 {
 	width: 40px;
+}
+.charsheet .sheet-item.sheet-45 {
+	width: 45px;
 }
 .charsheet .sheet-item.sheet-50 {
 	width: 50px;
 }
 .charsheet .sheet-item.sheet-60 {
 	width: 60px;
+}
+.charsheet .sheet-item.sheet-70 {
+	width: 70px;
 }
 .charsheet .sheet-item.sheet-80 {
 	width: 80px;
@@ -268,6 +263,19 @@ span.sheet-display {
     color:white;
     text-shadow:0px 0px 2px black;
 }
+span.sheet-display-sm {
+    text-align:center;
+    width:100%;
+    border-radius:3px;
+    background:gray;
+    min-width:15px;
+    text-align:center;
+    font-weight:bold;
+    margin:6px;
+    display:inline-block;
+    color:white;
+    text-shadow:0px 0px 2px black;
+}
 /* End of Rows and Items */
 .sheet-title {
     font-variant: small-caps;
@@ -322,7 +330,7 @@ select.sheet-select1 {
     resize: vertical;
     min-height:40px;
 	height: 40px;
-	background:#d3d3d3;
+	background:#efefef;
 	border-radius:5px;
 }
 .charsheet textarea.sheet-textarea2 {
@@ -331,7 +339,7 @@ select.sheet-select1 {
     min-height:40px;
 	height: 40px;
 	border-radius:5px;
-	background:#d3d3d3;
+	background:#efefef;
 	border-radius:5px;
 }
 .charsheet textarea.sheet-textarea3 {
@@ -340,7 +348,7 @@ select.sheet-select1 {
     min-height:40px;
 	height: 40px;
 	border-radius:5px;
-	background:#d3d3d3;
+	background:#efefef;
 	margin:0px;
 	padding:0px;
 }
@@ -349,7 +357,7 @@ select.sheet-select1 {
 	width: 390px;
 	height: 40px;
 	border-radius:5px;
-	background:#d3d3d3;
+	background:#efefef;
 	margin-top:10px;
 }
 .charsheet {
@@ -358,7 +366,7 @@ select.sheet-select1 {
 }
 @font-face {
 	font-family: 'RufscriptRegular';
-	src: url('http://openfontlibrary.org/assets/fonts/rufscript/92112519f91e7a5ab80261a017c09b72/f886671cdc88e2725676a457e14e8512/RufscriptRegular.ttf');
+	/* src: url('https://openfontlibrary.org/assets/fonts/rufscript/92112519f91e7a5ab80261a017c09b72/f886671cdc88e2725676a457e14e8512/RufscriptRegular.ttf'); */
 	font-weight: normal;
 	font-style: normal;
 }
@@ -437,6 +445,7 @@ input.sheet-attribute[type="radio"] {
 	margin: 0px;
 	cursor: pointer;
 	z-index: 1;
+	white-space: nowrap;
 }
 /* -----Fake sheet-attribute ----- */
 input.sheet-attribute[type="radio"]::before + span::before {
@@ -448,6 +457,7 @@ input.sheet-attribute[type="radio"]::before + span::before {
 	content: "";
 	width: 75px;
 	height: 18px;
+	white-space: nowrap;
 }
 span.sheet-attribute {
 	position: relative;
@@ -457,14 +467,17 @@ span.sheet-attribute {
 	height: 16px;
 	font-weight:bold;
 	color: #000000;
+	white-space: nowrap;
 }
 input.sheet-attribute[type="radio"]:hover + span {
 	color: #FFFFFF;
 	text-shadow:0px 0px 5px darkred;
+	white-space: nowrap;
 }
 input.sheet-attribute[type="radio"]:checked + span {
 	color: #8B0000;
 	text-shadow:none;
+	white-space: nowrap;
 }
 /* -----Hide sheet-splat_type ----- */
 input.sheet-form_select[type="radio"] {
@@ -747,11 +760,11 @@ input.sheet-paradox:checked ~ span.sheet-paradox {
 	top:-2px;
 	left:-2px;
 }
-/*------------  Word Checkbox-----------*/
+/*------------ Hide Word Checkbox -----------*/
 /* Hide actual checkbox */
 input.sheet-word[type="checkbox"] {
 	opacity: 0;
-	width: 100px;
+/*	width: 100px; */
 	height: 32px;
 	position: relative;
 	top: 35px;
@@ -878,7 +891,7 @@ span.sheet-Dynamic-switch{
 	position: absolute;
 }
 textarea.sheet-Dynamic-switch,div[data-groupname="repeating_merits"],div[data-groupname="repeating_flaws"]{
-	display: none;
+	display: inline-block;
 }
 div.sheet-Dynamic-switch,div.sheet-dynamic-controls{
 	display: none;
@@ -992,6 +1005,10 @@ div.sheet-spacer {
 	display:inline-block;
 	width:8px;
 }
+div.sheet-line-spacer {
+	display:inline;
+	width:8px;
+}
 .sheet-center {
 	margin-left:auto;
 	margin-right:auto;
@@ -1068,36 +1085,38 @@ input.sheet-zero[type="radio"] + span::before{
 .sheet-item button[type=roll].sheet-btn {
 	font-size:12px;
 	font-weight:700;
-	border-radius: 4px;
+	border-radius: 3px;
 	box-shadow:none;
 	height:16px;
 	width:100%;
 	
-	padding-top:4px;
-	padding-bottom:4px;
-	padding-left:4px;
-	padding-right:4px;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:1px;
+	padding-right:1px;
 	margin-bottom:2px;
+	margin-left:2px;
+	margin-right:2px;
 	
 	border: 2px outset gray;
 	background: transparent;
 	color: #000000;
 }
 .sheet-item button[type=roll].sheet-btn:hover {
-	padding-top:6px;
+	padding-top:5px;
 	padding-bottom:2px;
 	padding-right:2px;
-	padding-left:6px;
+	padding-left:5px;
 	
 	border: 2px inset gray;
 	background: #000000;
 	color: #FFFFFF;
 }
 .sheet-item button[type=roll].sheet-btn:active {
-	padding-top:6px;
+	padding-top:5px;
 	padding-bottom:2px;
 	padding-right:2px;
-	padding-left:6px;
+	padding-left:5px;
 	
 	border: 2px inset gray;
 	background: #FF0000;
@@ -1183,20 +1202,13 @@ button[type=roll].sheet-weaponroll:active {
 	color: #FFFFFF;
 }
 /* %%%%% %%%%% %%%%% */
-/* %%%%% %%%%% %%%%% */
-/* %%%%% %%%%% %%%%% */
 /* roll templates */
 /* %%%%% %%%%% %%%%% */
-/* %%%%% %%%%% %%%%% */
-/* %%%%% %%%%% %%%%% */
 .sheet-rolltemplate-skill table {
-	width: 189px;
-	height: 189px;
+	width: 170px;
+	height: 170px;
 	padding: 2px;
-	background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-W20/template_background.jpg) top left;
-	background-size: 189px 189px;
-	background-repeat: no-repeat;
-	font-family: "Courier New", Courier, monospace;
+	font-family: Georgia, serif;
 	font-weight: bold;
 	border-spacing: 0;
 }
@@ -1239,33 +1251,30 @@ button[type=roll].sheet-weaponroll:active {
 /* wod */
 /* %%%%% %%%%% %%%%% */
 .sheet-rolltemplate-wod table {
-	width: 250px;
-	height: 250px;
+/*	width: 200px;
+	height: 200px; */
 	padding: 2px;
-	background: url("https://github.com/Roll20/roll20-character-sheets/blob/master/CWOD-W20/template_background.jpg?raw=true") top left;
-	background-size: 250px 250px;
-	background-repeat: no-repeat;
-	font-family: "Courier New", Courier, monospace;
+	font-family: Georgia, serif;
 	font-weight: bold;
 	border-spacing: 0;
 }
 .sheet-rolltemplate-wod th {
 	color: rgb(112, 0, 0);
-	padding: 15px 2px 2px 20px;
-	line-height: 1.2em;
-	font-size: 1.2em;
+	padding: 2px 2px 2px 2px;
+	line-height: 1.1em;
+	font-size: 1.1em;
 	text-align: left;
 }
 .sheet-rolltemplate-wod td {
-	padding-left: 20px;
+	padding-left: 2px;
 	font-size: 1.0em;
 	vertical-align: top;
 }
 .sheet-rolltemplate-wod .sheet-result {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	text-align: center;
 	color: rgb(112, 0, 0);
-	padding-bottom: 20px;
+	padding-bottom: 2px;
 }
 .sheet-rolltemplate-wod .inlinerollresult {
 	background-color: transparent;
@@ -1291,8 +1300,8 @@ button[type=roll].sheet-weaponroll:active {
 	width: 190px;
 	padding: 2px;
 	background: white;
-	border-radius:8px;
-	border-width:10px;
+	border-radius:2px;
+	border-width:5px;
 	border-style:solid;
 	border-image: linear-gradient(#000000, #ffffff) 10;
 }
@@ -1303,19 +1312,19 @@ button[type=roll].sheet-weaponroll:active {
     border-style: solid;
     border-color: black;
     border-width: 1px 0 0 0;
-    border-radius: 20px;
-    margin-bottom: -20px;
+    border-radius: 2px;
+    margin-bottom: -2px;
 }
 .sheet-rolltemplate-wod2 hr:before { /* Not really supposed to work, but does */
     display: block;
     content: "";
-    height: 30px;
-    margin-top: -31px;
+    height: 3px;
+    margin-top: -3px;
     border-style: solid;
     border-color: black;
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
 .sheet-rolltemplate-wod2 div.sheet-skinny {
-    margin-top:-15px;
+    margin-top:-3px;
 }
